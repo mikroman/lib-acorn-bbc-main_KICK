@@ -1,8 +1,8 @@
 #importonce
-#import "macros.6502.asm"
+//#import "macros.6502.asm"
 #import "constants.6502.asm"
 #import "output.6502.asm"
-#import "vector.6502.asm"
+#import "vector.6502.asm"	//###    seems to also require this lib (mikroman)    ###
 //
 // title:        bbc micro mode 2 filled vector routines
 // author:       dean belfield

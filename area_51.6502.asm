@@ -9,16 +9,16 @@
 //
 // modinfo:
 //
-			* = $2000
+			* = $1900
 
 start:
-			#import "../lib/constants.6502.asm"
-			#import	"../lib/macros.6502.asm"
-			#import	"../lib/output.6502.asm"
-			#import "../lib/vector.6502.asm"
-			#import	"../lib/vector_filled.6502.asm"
-			#import "../lib/sprite.6502.asm"
-			#import "../lib/keyboard.6502.asm"
+			#import "constants.6502.asm"
+			#import	"macros.6502.asm"
+			#import	"output.6502.asm"
+			#import "vector.6502.asm"
+			#import	"vector_filled.6502.asm"
+			#import "sprite.6502.asm"
+			#import "keyboard.6502.asm"
 
 main:
 			lda	#157
