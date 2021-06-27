@@ -1,6 +1,6 @@
 #importonce
 #import "constants.6502.asm"
-#import "macros.6502.asm"
+#import "output.6502.asm"
 //
 // title:	bbc micro model b sprite routines
 // author:	dean belfield
@@ -166,7 +166,7 @@ skip_2:
 
 // reserve some space for the sprite definitions
 //
-//sprite_data:		skip sprite_data_len
+sprite_data:		//skip sprite_data_len
 
 .fill 0, (sprite_max * sprite_data_block_size)
 // the sprite definition object structure

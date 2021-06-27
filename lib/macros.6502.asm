@@ -18,12 +18,12 @@
 			sbc	value
 			}
 
-			.macro	cpl(){
+			.macro	cpl(value){
 			eor	#$ff
 			}
 
-			.macro	nega(){
-			cpl()
+			.macro	neg(value){
+			cpl(value)
 			adc	#1
 			}
 

@@ -2,6 +2,7 @@
 #import "macros.6502.asm"
 #import "constants.6502.asm"
 #import "output.6502.asm"
+#import "vector.6502.asm"
 //
 // title:        bbc micro mode 2 filled vector routines
 // author:       dean belfield

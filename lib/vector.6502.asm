@@ -97,7 +97,7 @@ skip_1:
 //
 // the loop
 //
-loop:			lda	r9			// get y
+loop:		lda	r9			// get y
 			cmp	r8			// compare with x
 			bcs	skip_4			// end if x > y
 			rts
@@ -202,7 +202,9 @@ draw_line:
 			ldx	#$01			// x direction defaults to +1
 			sub(px)			// subtract with x2
 			bcs	skip_px			// if carry then skip next bit
-			neg				// negate width to make it positive
+//			neg				// negate width to make it positive
+			eor #$ff
+			adc #$01
 			ldx #$ff			// change x draw direction to -1
 skip_px:
 		    stx	r4			// store x direction
@@ -212,7 +214,9 @@ skip_px:
 			ldy #$01			// y direction defauts to +1
 			sub(py)			// subtract with y2
 			bcs	skip_py			// if positive then skip next bit
-			neg				// negate height to make it positive
+//			neg				// negate height to make it positive
+			eor #$ff
+			adc #$01
 			ldy	#$ff			// change y draw direction to -1
 skip_py:
     		sty	r5			// store y direction

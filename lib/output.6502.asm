@@ -25,7 +25,7 @@
 			next
  */
  table_x280:
-		.for (n=0;n<32;n++){
+		.for (var n=0;n<32;n++){
 			.word	screen + (n * $280)
             }
 

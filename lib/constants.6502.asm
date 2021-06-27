@@ -1,5 +1,5 @@
 #importonce
-#import "../lib/macros.6502.asm"
+#import "macros.6502.asm"
 //
 // title:	bbc micro constants
 // author:	dean belfield
