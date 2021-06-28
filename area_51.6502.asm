@@ -1,4 +1,3 @@
-#importonce
 //
 // title:        area 51
 // author:       dean belfield
@@ -9,18 +8,17 @@
 //
 // modinfo:
 //
-			* = $1900
+			* = $2000	//set BuildDisk.asm to $2000
 
 start:
 			#import "constants.6502.asm"
 			#import	"macros.6502.asm"
-			#import	"output.6502.asm"
-			#import "vector.6502.asm"
-			#import	"vector_filled.6502.asm"
-			#import "sprite.6502.asm"
-			#import "keyboard.6502.asm"
 
 main:
+			lda #22
+			jsr oswrch
+			lda #2
+			jsr oswrch
 			lda	#157
             sta px
 			lda	#249
@@ -112,4 +110,9 @@ sprite_graphic:
 			.byte	$3f,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$3f	
 			.byte	$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f,$3f	
 
-end://			save	"area51", start, end, main
+//end:			save	"area51", start, end, main
+			#import	"output.6502.asm"
+			#import "vector.6502.asm"
+			#import	"vector_filled.6502.asm"
+			#import "sprite.6502.asm"
+			#import "keyboard.6502.asm"
